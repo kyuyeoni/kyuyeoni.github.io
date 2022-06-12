@@ -18,7 +18,7 @@ header { border: solid 0px red; height: 350px; width: 1140px; margin-top: 10px;}
 #top_menu a:link{text-decoration: none; color: white;}
 #top_menu a:visited{text-decoration: none; color: white;}
 
-#serch{border: solid 0px rgb(106, 0, 255); padding: 30px 0; margin-top: 30px; color: orange;}
+#serch{border-bottom: solid 1px #fc9775; padding-bottom: 20px; padding-top: 34px; color: orange; }
 #serch_logo{ font-size: 87px; text-align: center; color: orange; margin-left: 30px; padding: -90px; font-weight: bold;}
 #serch_a{font-size: 40px; text-align: center; margin-left: 30px;}
 #serch_1{ text-align: center;  margin: 40px auto;}
@@ -56,16 +56,50 @@ header { border: solid 0px red; height: 350px; width: 1140px; margin-top: 10px;}
 #sss{height: 53px; font-size: 20px; background-color: orange; border: solid 1px orange; color: white;}
 
 /*숫자버튼*/
-.number{border: solid 1px black; width: 35px; height: 35px; text-align: center; padding: 10px; font-size: 30px; margin-top: 10px; }
+.number{background-color: orange;width: 40px; text-align: center; padding: 5px 0; font-size: 20px; margin-top: 30px; margin-left: 7px; color: white;}
 /*찜버튼*/
-input[id="heart"] + label {display: inline-block; width: 35px; height: 35px; padding: 10px; border: solid 2px red; cursor: pointer;margin-top: 11px;}
-input[id="heart"]:checked + label {background-color: red;}
+input[id="heart"] + label {display: inline-block; width: 30px; height: 30px;
+       padding: 10px; background-image: url(img/heart.png); background-size: 55px; cursor: pointer;margin-top: 8px; margin-right: 20px;}
+input[id="heart"]:checked + label {background-image: url(img/heart_full.png);}
 input[id="heart"] {display: none;}
 
-/*숫자버튼+찜버튼 합침*/
-.sum {width: 59px; height: 140px; border: solid 1px ; margin-left: 20px; float: left; }
+input[id="heart2"] + label {display: inline-block; width: 30px; height: 30px; padding: 10px;background-image: url(img/heart.png); background-size: 55px;  cursor: pointer;margin-top: 8px; margin-right: 20px;}
+input[id="heart2"]:checked + label {background-image: url(img/heart_full.png);}
+input[id="heart2"] {display: none;}
 
-.c1_img{width: 190px; height: 115px; border: solid 1px red; float: left; margin-top: 13px; margin-left: 10px;}
+input[id="heart3"] + label {display: inline-block; width: 30px; height: 30px; padding: 10px; background-image: url(img/heart.png); background-size: 55px;; cursor: pointer;margin-top: 8px; margin-right: 20px;}
+input[id="heart3"]:checked + label {background-image: url(img/heart_full.png);}
+input[id="heart3"] {display: none;}
+
+input[id="heart4"] + label {display: inline-block; width: 30px; height: 30px; padding: 10px;background-image: url(img/heart.png); background-size: 55px;  cursor: pointer;margin-top: 8px; margin-right: 20px;}
+input[id="heart4"]:checked + label {background-image: url(img/heart_full.png);}
+input[id="heart4"] {display: none;}
+
+input[id="heart5"] + label {display: inline-block; width: 30px; height: 30px; padding: 10px;background-image: url(img/heart.png); background-size: 55px; cursor: pointer;margin-top: 8px; margin-right: 20px;}
+input[id="heart5"]:checked + label {background-image: url(img/heart_full.png);}
+input[id="heart5"] {display: none;}
+
+input[id="heart6"] + label {display: inline-block; width: 30px; height: 30px; padding: 10px;background-image: url(img/heart.png); background-size: 55px;  cursor: pointer;margin-top: 8px; margin-right: 20px;}
+input[id="heart6"]:checked + label {background-image: url(img/heart_full.png);}
+input[id="heart6"] {display: none;}
+
+input[id="heart7"] + label {display: inline-block; width: 30px; height: 30px; padding: 10px; background-image: url(img/heart.png); background-size: 55px; cursor: pointer;margin-top: 8px; margin-right: 20px;}
+input[id="heart7"]:checked + label {background-image: url(img/heart_full.png);}
+input[id="heart7"] {display: none;}
+
+/*숫자버튼+찜버튼 합침*/
+.sum {width: 59px; height: 140px; border: solid 0px ; margin-left: 20px; float: left; }
+
+.c1_img{width: 190px; height: 115px; border: solid 0px red; float: left; margin-top: 13px; margin-left: 10px;}
+
+/*내용*/
+.name{width: 360px; height: 115px; border: solid 0px red; float: left; margin-top: 10px; margin-left: 10px;}
+.c1_name{width: 240px; height: 20px; float: left; font-size: 20px; margin-top: 10px;}
+
+#nnnn{ width: 650px; height: 1100px; float: right; ;  font-size: 20px; text-align: right;} 
+#nnnn a:link{text-decoration: none; color: black;}
+#nnnn a:visited{text-decoration: none; color: black;}
+#nnnn a:hover{text-decoration: none; color: black;}
 
 /*내용*/
 .name{width: 360px; height: 115px; border: solid 1px red; float: left; margin-top: 10px; margin-left: 10px;}
@@ -97,15 +131,11 @@ li{list-style-type: none; line-height: 130%;}
 .one {font-size: 20px; padding-left: 15px; padding-top: 30px;}
 
 /*하단푸퍼*/
-footer{
-	width: 1140px;
-	height: 116px;
-	border: double 0px orange; background-color: orange;
-	margin-top: 23px; margin-bottom: 80px; color: white;
-}
-#impo{float: left;}
-#impo_1{float: left; padding: 13px 0; margin-left: 20px;}
-#impo_2{float: left; padding: 20px 0; margin-left: 10px;}
+#footer{ width: 100%; height: 210px; background-color:rgba(253, 227, 205, 0.678); margin-top: 40px;}
+#bottom{ height: 230px; width: 1140px; margin: 0 auto; border: solid 0px black; color: gray;}
+#im1{width: 300px; height: 230px; float: left; font-size: 16px; border: solid 0px black; line-height: 180%; margin-left: 60px; margin-top: 30px;}
+#im2{width: 150px; height: 230px; float: right; font-size: 16px; border: solid 0px black;  line-height: 180%; margin-right: 100px; margin-top: 30px;}
+
 
 #moto1{ font-size: 18px; margin-left: 30px; padding-top: 30px; padding-left: 10px;}
 #moto2{ list-style-type: none; line-height: 170%; padding-top: 13px;}
@@ -425,15 +455,24 @@ h5{font-size: 20px; margin-top: 5px;}
 <div class="clear"></div>
 
 <footer id="impo">
-      <a href="http://www.hoseo.ac.kr/Home/Main.mbz" target="_blank">
-            
-          </a>
-            <a href="https://portal.hoseo.edu/p/0000000027/" target="_blank">
-            <div id="impo_2">
-                  <h6>Department of Digital Business</h6>
-                  <h5>(천안캠퍼스 1호관 105호, TEL) 041-560-8348)</h5>
+      <footer id="footer">
+            <div id="bottom">
+                  <div id="im1">
+                        다모아 모든 리뷰를 한번에<br>
+                        (주) 다모아ㅣ 대표자 컴맹탈출조<br>
+                        이메일: alltogether@naver.com<br>
+                        주소: 충청남도 호서대 동남구 호서대길12<br>
+                        고객센터: 041-1234
+                  </div>
+      
+                  <div id="im2">
+                        디지털기술경영학과<br>
+                        강세린 20210304<br>
+                        김가은 20210308<br>
+                        김규연 20210309<br>
+                        김다혜 20210310
+                  </div>
             </div>
-          </a>
 </footer>
 
 </div>
