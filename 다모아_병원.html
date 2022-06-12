@@ -1,0 +1,433 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+
+* {padding: 0px; margin:0px;}
+#page{margin: 0 auto; width: 1150px;}
+body{font-family: 'Gowun Batang'}
+
+#menus{background-color: orange; height: 53px; width: 1140px;}
+header { border: solid 0px red; height: 350px; width: 1140px; margin-top: 10px;}
+#plus a:link{text-decoration: none; color: black;}
+#plus a:visited{text-decoration: none; color: black;}
+
+#logo a:link{text-decoration: none; color: white;}
+#logo a:visited{text-decoration: none; color: white;}
+#logo{border: solid 0px red; width: 110px; height: 40px; font-size: 25px; font-weight: bold; margin-left: 25px; float: left; margin-top: 8px; color: white; padding: 1px 0;} 
+#top_menu{border: solid 0px red; width: 300px; height: 40px; font-size: 18px; float: right; font-weight: bold; margin-top: 14px; margin-right: -20px; padding: 3px 0; color: white; }
+#top_menu a:link{text-decoration: none; color: white;}
+#top_menu a:visited{text-decoration: none; color: white;}
+
+#serch{border: solid 0px rgb(106, 0, 255); padding: 30px 0; margin-top: 30px; color: orange;}
+#serch_logo{ font-size: 87px; text-align: center; color: orange; margin-left: 30px; padding: -90px; font-weight: bold;}
+#serch_a{font-size: 40px; text-align: center; margin-left: 30px;}
+#serch_1{ text-align: center;  margin: 40px auto;}
+
+#ttt{width: 800px; height: 49px; font-size: 50px; border: solid 2px orange; color: orange;}
+#sss{width: 150px; height: 56px; font-size: 50px; background-color: orange; border: solid 1px orange; color: white; padding: 15px 0;}
+
+
+#contents_1 {border: solid 0px black; width: 1140px; height: 40px; margin-top: 15px;}
+#filter{border: solid 0px orange; width: 264px; height: 40px; float: left;  }
+
+#F1{border: solid 0px blue; width: 50px; height: 20px; padding: 10px 0;float: left; text-align: center; font-size: 20px; margin-left: 10px; }
+#F2{border: solid 0px blue; width: 50px; height: 20px; padding: 10px 0; float: left; text-align: center; font-size: 20px; }
+#F3{border: solid 0px blue; width: 59px; height: 20px; padding: 10px 0; float: left; text-align: center; font-size: 20px; margin-left: 20px;}
+#F4{border: solid 0px blue; width: 59px; height: 20px; padding: 10px 0; float: right; text-align: center; font-size: 20px; margin-right: 8px;}
+
+#filter_2{border-bottom: solid 2px orange; width: 650px; height: 40px; float: right; margin-right: 210px;}
+#F5{border: solid 0px blue; width: 70px; height: 20px; padding: 10px 0;float: right; text-align: center; font-size: 17px;}
+#F6{border: solid 0px blue; width: 120px; height: 20px; padding: 10px 0;float: right; text-align: center; font-size: 17px;}
+
+#a{border: solid 0px black; width: 1140px; height: 830px; margin-top: 6px; }
+#contents_2 {border: solid 0px black; width: 930px; height: 1100px; float: left;}
+#sub_menu {border: solid px orange; background-color: orange;  width: 265px; height: 1100px; float: left;}
+#main_contents{border: solid 0px orange; width: 650px; height: 1100px; margin-left: 10px; float: right; }
+.c1{width: 660px; background-color: rgb(231, 220, 197); height: 145px; margin-bottom: 10px;}
+
+#banner{border: solid 0px brown; width: 160px; height: 1100px; margin-right: 30px; float: right;}
+#banner_1{border: solid 0px purple; width: 120px; height: 518px; margin-top: 40px; }
+#banner_2{border: solid 0px purple; width: 180px; height: 518px;margin-top: 20px; }
+
+.one {font-size: 20px; padding-left: 15px; padding-top: 30px;}
+
+#ttt{width: 640px; height: 51px; font-size: 20px; border: solid 2px orange; color: orange; margin-left: 65px;}
+#sss{height: 53px; font-size: 20px; background-color: orange; border: solid 1px orange; color: white;}
+
+/*숫자버튼*/
+.number{border: solid 0px black; width: 35px; height: 35px; text-align: center; padding: 10px; font-size: 30px; margin-top: 10px; }
+/*찜버튼*/
+input[id="heart"] + label {display: inline-block; width: 35px; height: 35px; padding: 10px; border: solid 2px orange; cursor: pointer;margin-top: 7px;}
+input[id="heart"]:checked + label {background-color: orange;}
+input[id="heart"] {display: none;}
+
+/*숫자버튼+찜버튼 합침*/
+.sum {width: 59px; height: 65px; border: solid 1px orange; margin-left: 10px; float: left; }
+
+.c1_img{width: 190px; height: 115px; border: solid 0px red; float: left; margin-top: 13px; margin-left: 10px;}
+
+/*내용*/
+.name{width: 360px; height: 115px; border: solid 0px red; float: left; margin-top: 10px; margin-left: 10px;}
+.c1_name{width: 240px; height: 20px; float: left; font-size: 17px; margin-top: 10px;}
+.n_1{width: 80px; height: 30px; float: left; border: solid 0px red; padding: 5px 0; text-align: center;}
+.n_2{width: 60px; height: 30px; float: left; border: solid 0px  red; padding: 5px 0; text-align: center;}
+.n_3{width: 50px; height: 30px; float: left; border: solid 0px  red; padding: 5px 0; text-align: center;}
+
+.c1_name2{width: 280px; height: 20px; font-size: 22px; margin-top: 50px;}
+.n_4{width: 65px; height: 20px; float: left; border: solid 0px  red; padding: 5px 0; text-align: center;}
+.n_5{width: 30px; height: 20px; float: left; border: solid 0px  red; padding: 5px 0; text-align: center;}
+.n_6{width: 35px; height: 20px; float: left; border: solid 0px  red; padding: 5px 0; text-align: center;}
+.n_7{width: 75px; height: 20px; float: left; border: solid 0px  red; padding: 5px 0; text-align: center;}
+.n_8{width: 60px; height: 20px; float: left; border: solid 0px  red; padding: 5px 0; text-align: center;}
+#salonde{font-size: 17px; width: 100px; height: 30px;  padding: 5px 0; text-align: center;}
+#feel{width: 90px; height: 30px;}
+.n_4{font-size: 15px;}
+.n_6{font-size: 15px;}
+.n_7{font-size: 15px;}
+.n_8{font-size: 15px;}
+#talk{width: 90px; height: 30px;text-align: center;}
+#hana{width: 110px; height: 30px;text-align: center;}
+#dam{width: 90px; height: 30px;text-align: center;}
+#lee{width: 120px; height: 30px;text-align: center;}
+#apple{width: 90px; height: 30px;text-align: center;}
+#map{width: 230px; height: 120px; border: solid 0px red; margin-top: 30px; font-size: 18px; margin-left: 15px;}
+li{list-style-type: none; line-height: 130%;}
+.map_1{display: inline;}
+#map2{width: 230px; height: 120px; border: solid 0px red;  font-size: 18px; margin-left: 15px; margin-top: 90px;}
+.map3{width: 200px; height: 100px; border: solid 0px red;  font-size: 18px; margin-left: 15px; margin-top: 10px;}
+
+
+/*하단푸퍼*/
+footer{
+	width: 1140px;
+	height: 116px;
+	border: double 0px orange; background-color: orange;
+	margin-top: 23px; margin-bottom: 80px; color: white;
+}
+#impo{float: left;}
+#impo_1{float: left; padding: 13px 0; margin-left: 20px;}
+#impo_2{float: left; padding: 20px 0; margin-left: 10px;}
+
+#moto1{ font-size: 18px; margin-left: 30px; padding-top: 30px; padding-left: 10px;}
+#moto2{ list-style-type: none; line-height: 170%; padding-top: 13px;}
+h2{font-size: 20px;}
+h6{font-size: 20px;
+      margin: 20px ;
+text-align: center;}
+h5{font-size: 20px; margin-top: 5px;
+      text-align: center;}
+</style>
+</head>
+
+<body>
+      
+<div id="page">
+<nav id="menus">
+      <div id="logo"><a href="다모아_메인화면.html">다모아</a></div>
+      <div id="top_menu"> <a href="다모아_회원가입.html">회원가입</a> | <a href="다모아_로그인.html">로그인</a> | <a href="다모아_마이페이지.html">마이페이지</a></div>
+</nav>
+<header>
+      <div id="serch">
+      <div id="serch_logo">
+            병원
+      </div>
+
+      <div id="serch_a">
+            병원에 대한 모든 것
+      </div>
+                                         
+      <div id="serch_1">
+            <form class="box">
+            <input type="text" id="ttt" value="">
+            <input type="submit" id="sss" value="검색">
+            </form>
+      </div>
+      </div>
+</header>
+
+<section id='contents_1'>
+      <div id = "filter">
+           <div id="F1">
+            필터
+           </div>
+
+           <div id="F2">
+            img
+            </div>
+
+           <div id="F3">
+                 취소
+           </div>
+           
+           <div id="F4">
+                 적용
+           </div>
+      </div>
+
+      <div id = "filter_2">
+
+            <div id="F6">
+                  거리가까운순
+            </div>
+
+            <div id="F5">
+                  추천순
+            </div>
+
+
+      </div>
+
+
+</section>
+
+<div class="clear"></div>
+
+<div id="a">
+<section id='contents_2'>
+     <nav id='sub_menu'>
+      <div id="map">
+            <form>
+                  <h4>#지역</h4>
+                  <ul>
+                        <li class="map_1"><input type="checkbox"> 서울</li>
+                        <li class="map_1"><input type="checkbox"> 경기</li>
+                        <li class="map_1"><input type="checkbox"> 충남</li>
+                        <li class="map_1"><input type="checkbox"> 충북</li><br>
+                        <li class="map_1"><input type="checkbox"> 전북</li>
+                        <li class="map_1"><input type="checkbox"> 전남</li>
+                        <li class="map_1"><input type="checkbox"> 강원도</li><br>
+                        <li class="map_1"><input type="checkbox"> 경남</li>
+                        <li class="map_1"><input type="checkbox"> 경북</li>
+                        <li class="map_1"><input type="checkbox"> 제주도</li>
+                  </ul>
+            </form>
+           </div>
+
+           <div class="map3">
+            <form>
+                  <h4>#거리</h4>
+                  <ul>
+                        <li class="map_1"><input type="checkbox"> 차로5분</li>
+                        <li class="map_1"><input type="checkbox"> 차로10분</li><br>
+                        <li class="map_1"><input type="checkbox"> 차로15분</li>
+                        <li class="map_1"><input type="checkbox"> 걸어서3분</li><br>
+                        <li class="map_1"><input type="checkbox"> 걸어서5분</li>
+                        <li class="map_1"><input type="checkbox"> 걸어서7분</li>
+
+                  </ul>
+            </form>
+           </div>
+
+           <div class="map3">
+            <form>
+                  <h4>#예약가능</h4>
+                  <ul>
+                        <li class="map_1"><input type="checkbox"> 유</li>
+                        <li class="map_1"><input type="checkbox"> 무</li>
+                  </ul>
+            </form>
+           </div>
+
+           <div class="map3">
+            <form>
+                  <h4>#진료</h4>
+                  <ul>
+                        <li class="map_2"><input type="checkbox"> 야간진료</li>
+                        <li class="map_2"><input type="checkbox"> 토요일진료</li>
+                        <li class="map_2"><input type="checkbox"> 일요일진료</li>
+                        <li class="map_2"><input type="checkbox"> 공휴일진료</li>
+                        <li class="map_2"><input type="checkbox"> 일요일진료</li>
+                  </ul>
+            </form>
+           </div>
+
+           <div id="map2">
+            <form>
+                  <h4>#주차장유무</h4>
+                  <ul>
+                        <li class="map_1"><input type="checkbox"> 유</li>
+                        <li class="map_1"><input type="checkbox"> 무</li><br>
+                  </ul>
+            </form>
+           </div>
+
+           <div class="map3">
+            <form>
+                  <h4>#의사정보</h4>
+                  <ul>
+                        <li class="map_1"><input type="checkbox"> 여</li>
+                        <li class="map_1"><input type="checkbox"> 남</li>
+                  </ul>
+            </form>
+           </div>
+
+           <div class="map3">
+            <form>
+                  <h4>#점심시간</h4>
+                  <ul>
+                        <li class="map_1"><input type="radio" name="imfo"> ~1시</li>
+                        <li class="map_1"><input type="radio" name="imfo"> ~2시</li>
+                  </ul>
+            </form>
+           </div>
+
+           <div class="map3">
+            <form>
+                  <h4>#병원종류</h4>
+                  <ul>
+                        <li class="map_1"><input type="radio" name="imfo"> 치과</li>
+                        <li class="map_1"><input type="radio" name="imfo"> 피부과</li>
+                        <li class="map_1"><input type="radio" name="imfo"> 산부인과</li>
+                        <li class="map_1"><input type="radio" name="imfo"> 성형외과</li>
+                        <li class="map_1"><input type="radio" name="imfo"> 정신건강의학과</li>
+                        <li class="map_1"><input type="radio" name="imfo"> 내과</li><br>
+                        <li class="map_1"><input type="radio" name="imfo"> 이비인후과</li>
+                        <li class="map_1"><input type="radio" name="imfo"> 소아과</li>
+                  </ul>
+            </form>
+           </div>
+     </nav>
+   
+      <div id='main_contents'>
+       
+       <div class="c1">
+             <div class="sum">
+                  <div class="number">1</div>
+                  <input type="checkbox" id="heart"><label for="heart"></label>
+             </div>
+             <div class="c1_img"> <img src="img/치과외부.png" width="190px" height="115px"></div>
+
+            
+            <div class="name">
+                  <div class="box"><div class='one'> <b>리더스치과</b>&nbsp;&nbsp;&nbsp; 영업중&nbsp;&nbsp;&nbsp;433m<br>
+                        경기&nbsp;&nbsp;&nbsp;<img src='img/star.png'width='20px'>3.8&nbsp;&nbsp;&nbsp;리뷰251&nbsp;&nbsp;&nbsp;
+                        <span id='plus'><a href='다모아_더보기.html'>더보기</a><span></div>
+                  </div>
+                  </div>
+       </div>
+       <div class="c1">
+            <div class="sum">
+                  <div class="number">2</div>
+                  <input type="checkbox" id="heart"><label for="heart"></label>
+             </div>
+             <div class="c1_img"> <img src="img/두정이진병원.png" width="190px" height="115px"> </div>
+
+            
+            <div class="name">
+                  <div class="box"><div class='one'> <b>이진병원</b>&nbsp;&nbsp;&nbsp; 영업중&nbsp;&nbsp;&nbsp;353m<br>
+                        충남&nbsp;&nbsp;&nbsp;<img src='img/star.png'width='20px'>3.7&nbsp;&nbsp;&nbsp;리뷰257&nbsp;&nbsp;&nbsp;
+                        <span id='plus'><a href='다모아_더보기.html'>더보기</a><span></div>
+                  </div>
+                  </div>
+      
+       </div>
+       <div class="c1">
+            <div class="sum">
+                  <div class="number">3</div>
+                  <input type="checkbox" id="heart"><label for="heart"></label>
+             </div>
+             <div class="c1_img"><img src="img/산부인과인물.png"width="190px" height="115px"></div>
+
+            
+            <div class="name">
+                  <div class="box"><div class='one'> <b>애플산부인과</b>&nbsp;&nbsp;&nbsp; 영업중&nbsp;&nbsp;&nbsp;457m<br>
+                        충남&nbsp;&nbsp;&nbsp;<img src='img/star.png'width='20px'>4.0&nbsp;&nbsp;&nbsp;리뷰571&nbsp;&nbsp;&nbsp;
+                        <span id='plus'><a href='다모아_더보기.html'>더보기</a><span></div>
+                  </div>
+                  </div>
+       </div>
+       <div class="c1">
+            <div class="sum">
+                  <div class="number">4</div>
+                  <input type="checkbox" id="heart"><label for="heart"></label>
+             </div>
+             <div class="c1_img"> <img src="img/정신과사진.png" width="190px" height="115px"></div>
+
+            
+            <div class="name">
+                  <div class="box"><div class='one'> <b>담은정신건강의학과</b>&nbsp;&nbsp;&nbsp; 영업중&nbsp;&nbsp;&nbsp;473m<br>
+                        전남&nbsp;&nbsp;&nbsp;<img src='img/star.png'width='20px'>3.6&nbsp;&nbsp;&nbsp;리뷰571&nbsp;&nbsp;&nbsp;
+                        <span id='plus'><a href='다모아_더보기.html'>더보기</a><span></div>
+                  </div>
+                  </div>
+       </div>
+       <div class="c1">
+            <div class="sum">
+                  <div class="number">5</div>
+                  <input type="checkbox" id="heart"><label for="heart"></label>
+             </div>
+             <div class="c1_img"> <img src="img/피부과내부.png"width="190px" height="115px"></div>
+
+            
+            <div class="name">
+                  <div class="box"><div class='one'> <b>톡스앤필의원</b>&nbsp;&nbsp;&nbsp; 영업중&nbsp;&nbsp;&nbsp;454m<br>
+                        경기&nbsp;&nbsp;&nbsp;<img src='img/star.png'width='20px'>3.7&nbsp;&nbsp;&nbsp;리뷰221&nbsp;&nbsp;&nbsp;
+                        <span id='plus'><a href='다모아_더보기.html'>더보기</a><span></div>
+                  </div>
+                  </div>
+       </div>
+       <div class="c1">
+            <div class="sum">
+                  <div class="number">6</div>
+                  <input type="checkbox" id="heart"><label for="heart"></label>
+             </div>
+             <div class="c1_img"> <img src="img/인비인 건물.png" width="190px" height="115px"></div>
+
+            
+            <div class="name">
+                  <div class="box"><div class='one'> <b>하나이비인후과</b>&nbsp;&nbsp;&nbsp; 영업중&nbsp;&nbsp;&nbsp;457m<br>
+                        전남&nbsp;&nbsp;&nbsp;<img src='img/star.png'width='20px'>3.5&nbsp;&nbsp;&nbsp;리뷰51&nbsp;&nbsp;&nbsp;
+                        <span id='plus'><a href='다모아_더보기.html'>더보기</a><span></div>
+                  </div>
+                  </div>
+       </div>
+       <div class="c1">
+            <div class="sum">
+                  <div class="number">7</div>
+                  <input type="checkbox" id="heart"><label for="heart"></label>
+             </div>
+             <div class="c1_img"> <img src="img/이비인건물2.png"width="190px" height="115px"></div>
+
+            
+            <div class="name">
+                  <div class="box"><div class='one'> <b>이범식이비인후과</b>&nbsp;&nbsp;&nbsp; 영업중&nbsp;&nbsp;&nbsp;457m<br>
+                        충남&nbsp;&nbsp;&nbsp;<img src='img/star.png'width='20px'>3.4&nbsp;&nbsp;&nbsp;리뷰214&nbsp;&nbsp;&nbsp;
+                        <span id='plus'><a href='다모아_더보기.html'>더보기</a><span></div>
+                  </div>
+                  </div>
+       </div>
+  
+ 
+      </div>
+
+</section>
+
+<aside id="banner">
+      <div id="banner_1">
+            <img src="img/최준배너광고.png" width="180px" height="500px">
+      </div>
+      <div id="banner_2"><img src="img/최준 포스터 2.png" width="180px" height="500px"></div>
+</aside>
+
+</div>
+
+<div class="clear"></div>
+
+<footer id="impo">
+      <a href="http://www.hoseo.ac.kr/Home/Main.mbz" target="_blank">
+            
+                  <h6>Department of Digital Business</h6>
+                  <h5>(천안캠퍼스 1호관 105호, TEL) 041-560-8348)</h5>
+            </div>
+          </a>
+</footer>
+
+</div>
+
+      
+</body>
+
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+* {padding: 0px; margin:0px;}
+#page{margin: 0 auto; width: 1150px;}
+#page2{margin: 0 auto; width: 100%;}
+.clear{clear: both;}
+body{font-family: 'Gowun Batang'}
+
+/*상단 미니 메뉴바*/
+#menus{background-color: orange; height: 57px; width: 100%;}
+#top{height: 53px; width: 1140px; margin: 0 auto;}
+#logo{border: solid 0px red;font-weight: bold; width: 110px; height: 40px; font-size: 30px; margin-left: 60px; float: left; margin-top: 6px; color: white; padding: 1px 0;} 
+#top_menu{border: solid 0px red; width: 300px; font-weight: bold; height: 30px; font-size: 20px; float: right; margin-top: 4px;  padding: 3px 0; color: white; margin-right: 40px; }
+#top_menu a:link{text-decoration: none; color: white;}
+#top_menu a:visited{text-decoration: none; color: white;}
+#logo a:link{text-decoration: none; color: white;}
+#logo a:visited{text-decoration: none; color: white;}
+
+/*헤더*/
+#head{ width: 300px; height: 900px;  float: left; margin-left: 10px; margin-top: 20px;}
+#food{width: 150px;  font-size: 36px; font-weight: bold;  border: solid 0px red; text-align: center; padding: 2px; margin-top: 45px; margin-left: 110px;}
+
+#search{width: 280px; border: solid 0px red;  padding: px; text-align: center; margin-left: 60px; margin-top: 15px;}
+#ttt{border: solid 2px orange; width: 180px; height: 25px;}
+#sss{border: solid 2px orange; background-color: orange; width: 50px; height: 27px; color: white;}
+
+#l1{width: 180px; border-bottom: solid 2px orange; padding: 3px 0;  margin-top: 10px;  font-size: 17px; margin-left: 60px; text-align: right;}
+#l1 a{color: black; text-decoration: none; }
+#l1 a:visited{color: black; text-decoration: none; }
+#li a:hover{color: black; text-decoration: none;}
+
+#l2{width: 190px; height: 20px; font-size: 19px; text-align: right; border: solid 0px red; padding-bottom: 10px; margin-bottom: 20px; margin-left: 60px;}
+#l2 a{color: black; text-decoration: none; }
+#l2 a:visited{color: black; text-decoration: none; }
+#l2 a:hover{color: black; text-decoration: none;}
+
+#fo{width: 370px; height: 880px; border-right: solid 1px orange ;}
+.chu{  }
+.box1{  width: 280px;font-size: 19px; height: 70px;  border: solid 1px orange; margin-left: 55px; margin-top: 10px; font-size: 15px;}
+.first {color: orange; width: 30px;  border: solid 0px orange; float: left; text-align: center; font-size: 23px; padding: 10px 0; margin-left: 13px; margin-top: 7px;}
+.cc{float: left; margin-top: 15px; margin-left: 5px;}
+span{color: red;}
+
+/*섹샨*/
+#sec{width: 840px; height: 250px;  float: left;}
+
+#img{ width: 170px; height: 160px; background-color: palevioletred; float: left; margin-left: 130px; margin-top: 90px;}
+#n1{width: 450px; height: 140px; border: solid 0px red; float: left; margin-left: 60px; margin-top: 90px;}
+#c1{width: 350px;  font-size: 30px; border: solid 0px red; padding: 10px 0; text-align: left; margin-right: 2px;}
+#c2{width: 350px;font-size: 19px; border: solid 0px red; padding: 5px 0; text-align: left;}
+#c3{width: 440px; height: 80px;  border: solid 0px red; margin-top: 10px ;}
+#c4{width: 440px;  border: solid 0px red; padding: 5px 0; text-align: left; font-size: 15px;}
+#c5{width: 440px;   border: solid 0px red; padding: 5px 0; text-align: left; font-size: 15px;}
+
+
+/*미니 네비게이션*/
+#mini_nav{width: 590px; height: 500px;  float: left; margin-left: 130px; margin-top: 25px;}
+
+input[type="radio"] {display: none;}
+input[type="radio"] + label{display: inline-block; width: 80px; padding: 10px 20px 10px 20px;
+	 border-bottom: solid 2px orange; color: black; font-size: 17px; cursor: pointer; text-align: center;  }
+input[type="radio"]:checked + label{border-bottom: solid 2px orange;color: black;}
+
+.conbox{width: 600px; height:585px;background: #ffc8b633; margin: 0 auto; display: none;}
+
+input[id="tab01"]:checked ~ .con1 {display: block;}
+input[id="tab02"]:checked ~ .con2 {display: block;}
+input[id="tab03"]:checked ~ .con3 {display: block;}
+input[id="tab04"]:checked ~ .con4 {display: block;}
+#a { margin-left: 50px; margin-top: 30px;}
+ul {list-style-type: none; line-height: 160%;}
+#line {margin-left: 80px; margin-top: 30px; font-size: 20px;}
+#menu {margin-left: 40px; padding-top: 30px; }
+#menu2{font-size: 18px; margin-left: 20px; list-style: none;}
+#menu3{font-size: 18px; margin-left: 20px; margin-top: 20px;}
+#review {margin-left: 35px; padding-top: 30px;}
+#s{margin-left: 30px;padding-top: 25px;}
+
+
+#rrr{width: 580px; height: 200px; border: solid 0px red; margin-left: 400px; font-size: 18px; }
+#re1{width: 530px; height: 150px; border-bottom: solid 1px #FF6633; border-top: solid 1px #FF6633; background-color: white; margin-right: 30px; margin-top: 10px; }
+#re6{float: left; width: 200px; height: 100px; margin-top: 10px; margin-left: 30px; }
+#re7{float: left; width: 270px; height: 100px; font-size: 15px; margin-top: 30px; }
+#re3{margin-top: 10px;}
+#re5{width: 270px; height: 20px; text-align: right;}
+#re4{width: 270px; height: 80px;}
+
+#rrr {color: black; text-decoration: none; }
+#rrr:visited{color: black; text-decoration: none; }
+#rrr:hover{color: black; text-decoration: none;}
+#nnnn{width: 530px; height: 30px; text-align: right;  margin-top: 5px;}
+#nnnn a{color: black; text-decoration: none; }
+#nnnn a:visited{color: black; text-decoration: none; }
+#nnnn a:hover{color: black; text-decoration: none;}
+
+/*하단푸터*/
+#footer{ width: 100%; height: 210px; background-color:rgba(253, 227, 205, 0.678); margin-top: 40px;}
+#bottom{ height: 230px; width: 1140px; margin: 0 auto; border: solid 0px black; color: gray;}
+#im1{width: 300px; height: 230px; float: left; font-size: 16px; border: solid 0px black; line-height: 180%; margin-left: 60px; margin-top: 30px;}
+#im2{width: 150px; height: 230px; float: right; font-size: 16px; border: solid 0px black;  line-height: 180%; margin-right: 100px; margin-top: 30px;}
+
+</style>
+</head>
+
+<body>
+
+
+<div id="page2">
+<nav id="menus">
+	<div id="top">
+		<div id="logo"><a href="다모아_메인화면.html">다모아</a></div>
+		<div id="top_menu"><div id="top_menu"> <a href="다모아_회원가입.html">회원가입</a> | <a href="다모아_로그인.html">로그인</a> | <a href="다모아_마이페이지.html">마이페이지</a></div> 
+	</div>
+</nav>
+</div>
+
+<div id="page">
+<header id="head">
+	<div id="fo">
+	<div id="food">
+		식&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;당
+	</div>
+
+	<div id="search">
+		<form id="box">
+			<input type="text" id="ttt" value="">
+            <input type="submit" id="sss" value="검색">
+		</form>
+	</div>
+
+	<div id="line">
+		<div id="l1">
+			<a href="">추천순</a>&nbsp;&nbsp;
+			<a href="">거리가까운순</a>
+		</div>
+	</div>
+
+	<div class="box1">
+		<div class="chu">
+			<div class='first'>1)</div>
+			<div class="cc">
+				<b>퍼밀</b>&nbsp;&nbsp;&nbsp;<span>영업중</span> &nbsp;&nbsp;&nbsp;350m<br>
+				서울 마포구&nbsp;&nbsp;&nbsp;<img src='img/star.png'width='20px'>4.7&nbsp;&nbsp;&nbsp; 리뷰514 
+			</div>
+		</div>
+	</div>
+
+	<div class="box1">
+		<div class="chu">
+			<div class='first'>2)</div>
+			<div class="cc">
+			 <b>차만다</b>&nbsp;&nbsp;&nbsp; <span>영업중</span>&nbsp;&nbsp;&nbsp;600m<br>
+				서울 마포구&nbsp;&nbsp;&nbsp;<img src='img/star.png'width='20px'>4.4&nbsp;&nbsp;&nbsp;리뷰489
+			</div>
+		</div>
+	</div>
+
+	<div class="box1">
+		<div class="chu">
+			<div class='first'>3)</div>
+			<div class="cc">
+				<b>봄띠</b> &nbsp;&nbsp;&nbsp;<span>영업중</span>&nbsp;&nbsp;&nbsp; 262m <br>
+     서울 마포구&nbsp;&nbsp;&nbsp;<img src='img/star.png'width='20px'>4.3  &nbsp;&nbsp;&nbsp;리뷰475
+			</div>
+		</div>
+	</div>
+
+	<div class="box1">
+		<div class="chu">
+			<div class='first'>4)</div>
+			<div class="cc">
+				<b>감칠</b>&nbsp;&nbsp;&nbsp; <span>영업중</span>&nbsp;&nbsp;&nbsp; 225m<br>
+	    서울 마포구&nbsp;&nbsp;&nbsp; <img src='img/star.png'width='20px'>3.9 &nbsp;&nbsp;&nbsp;리뷰558
+			</div>
+		</div>
+	</div>
+
+	<div class="box1">
+		<div class="chu">
+			<div class='first'>5)</div>
+			<div class="cc">
+				<b>루나씨엘로</b>&nbsp;&nbsp;&nbsp; <span>영업중</span>&nbsp;&nbsp;&nbsp; 190m<br>
+	    서울 마포구&nbsp;&nbsp;&nbsp; <img src='img/star.png'width='20px'>4.0 &nbsp;&nbsp;&nbsp;리뷰315
+			</div>
+		</div>
+	</div>
+
+	<div class="box1">
+		<div class="chu">
+			<div class='first'>6)</div>
+			<div class="cc">
+				<b>문</b>&nbsp;&nbsp;&nbsp; <span>영업중</span>&nbsp;&nbsp;&nbsp; 75m<br>
+	    서울 마포구&nbsp;&nbsp;&nbsp; <img src='img/star.png'width='20px'>4.1 &nbsp;&nbsp;&nbsp;리뷰129
+			</div>
+		</div>
+	</div>
+
+	<div class="box1">
+		<div class="chu">
+			<div class='first'>7)</div>
+			<div class="cc">
+				<b>오늘 그대와</b>&nbsp;&nbsp; <span>영업중</span>&nbsp;&nbsp; 433m<br>
+	    서울 마포구&nbsp;&nbsp; <img src='img/star.png'width='20px'>3.9 &nbsp;&nbsp;리뷰216
+			</div>
+		</div>
+	</div>
+
+	<div class="box1">
+		<div class="chu">
+			<div class='first'>8)</div>
+			<div class="cc">
+				<b>계란말이쇼</b>&nbsp;&nbsp; <span>영업중</span>&nbsp;&nbsp; 300m<br>
+	    서울 마포구&nbsp;&nbsp; <img src='img/star.png'width='20px'>3.9 &nbsp;&nbsp;리뷰216
+			</div>
+		</div>
+	</div>
+
+		<div id="line">
+			<div id="l2">
+			<a href=""> &lt; 1 2 3 4 5 6 7 8 &gt;</a>	
+			</div>
+		</div>
+
+</div>
+
+
+</header>
+
+<section id="sec">
+	<div id="sec1">
+	  <div id="img"><img src='img/식당_퍼밀.png' width="170" height="160"></div>
+	  <div id="n1">
+		<div id="c1"><b>퍼밀</b></div>
+		<div id="c2"><b>주소:</b> 서울 마포구 동교로46길 26</div>
+		<div id="c3">
+			<div id="c4"><b></b>#연남동&nbsp;&nbsp; <b>#</b>양식&nbsp;&nbsp; <b>#</b>홍대&nbsp;&nbsp; <b>#</b>레스토랑 &nbsp;&nbsp;</div>
+			<div id="c5"><b></b>#데이트&nbsp;&nbsp; <b>#</b>파스타&nbsp;&nbsp; <b>#</b>깔끔한&nbsp;&nbsp; <b>#</b>분위기있는&nbsp;&nbsp; </div>
+			
+
+		</div>
+
+	  </div>
+	</div>
+</section>
+
+
+<nav id="mini_nav">
+	
+	<div class="tab_content">
+		<input type="radio" name="tabmenu" id="tab01" checked>
+		<label for="tab01"> <b>가게정보</b></label>&nbsp;&nbsp;&nbsp;&nbsp;
+		<input type="radio" name="tabmenu" id="tab02">
+		<label for="tab02"><b>메뉴판</b></label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<input type="radio" name="tabmenu" id="tab03">
+		<label for="tab03"><b>리뷰</b></label>&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<input type="radio"  name="tabmenu" id="tab04">
+		<label for="tab04"><b>사진</b></label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<div class="conbox con1">
+			
+			<img id="a" src="img/퍼밀_위치.PNG" width="500px" height="300px">
+		<div id='line'>
+			<ul>
+			  <li><b>장소:</b> 서울 마포구 동교로46길 26</li>
+			  <li><b>영업시간:</b> 매일 12:00-22:00, 21:00에 라스트오더</li>
+			  <li><b>전화번호:</b> 0507-1419-0307</li>
+			  <li><b>예약 가능 여부:</b> 가능</li>
+			  <li><b>인스타그램 및 가게 홍보 주소:</b> @permil_yeonnam<li>
+			  <li><b>주차장 유무:</b> 무</li>
+		    </ul>
+		</div>
+	    </div>
+		<div class="conbox con2">
+			<div id='menu'>
+				<img src="img/퍼밀_메뉴판1.png" width="260px">
+				<img src="img/퍼밀_메뉴판2.png" width="260px">
+				<h4 id="menu3">[EVENT]</h5>
+				<ul id="menu2">
+					<li>- 현금결제시 음료 1개 제공</li>
+					<li>- 이번달 행사: 사이드 메뉴 50% 할인</li>
+					<li>- 포장주문 가능 (포장할인 1000원)</li>
+				</ul>
+			</div>
+		</div>
+		<div class="conbox con3">
+		<div id='review'>
+			<a id="rrr" href="">리뷰작성하기</a>
+			<div id="re1">
+				<div id="re6">
+				  <div id="re2">[가은이님]</div>
+				  <div id="re3"><img src="img/퍼밀1.jpg" width="80px">&nbsp;<img src="img/퍼밀3.jpg" width="80px"></div>
+			    </div>
+				<div id="re7">
+				  <div id="re4">남자친구랑 함께 갔었는데 분위기도 좋고 음식도 맛있었어용 분위기가 딱 제 스타일 이었어요! 재방문 의사 있습니다~</div>
+				  <div id="re5">2022.06.12</div>
+			    </div>
+			</div>
+
+			<div id="re1">
+				<div id="re6">
+				  <div id="re2">[세리니님]</div>
+				  <div id="re3"><img src="img/퍼밀5.jpg" width="80px">&nbsp;<img src="img/퍼밀6.jpg" width="80px"></div>
+			    </div>
+				<div id="re7">
+				  <div id="re4">가족들하고 오기 좋네요ㅋ 할인해줘서 좋아요</div>
+				  <div id="re5">2022.06.11</div>
+			    </div>
+			</div>
+
+			<div id="re1">
+				<div id="re6">
+				  <div id="re2">[다혜규여니님]</div>
+				  <div id="re3"><img src="img/퍼밀2.jpg" width="80px">&nbsp;<img src="img/퍼밀4.jpg" width="80px"></div>
+			    </div>
+				<div id="re7">
+				  <div id="re4">웨이팅이 길었는데 기다린 값을 하네여 추천이용!!</div>
+				  <div id="re5">2022.06.10</div>
+			    </div>
+			</div>
+
+			<div id="nnnn"><a href="">&lt; 1 2 3 4 5 6 7 8 &gt;</a></div>
+
+		</div>
+
+		
+
+		
+	</div>
+	
+
+
+		<div class="conbox con4">
+			<div id='s'>
+				<img src="img/퍼밀1.jpg" width="180px"><img src="img/퍼밀2.jpg" width="180px"><img src="img/퍼밀3.jpg" width="180px"><img src="img/퍼밀4.jpg" width="180px">
+			<img src="img/퍼밀5.jpg" width="180px"><img src="img/퍼밀6.jpg" width="180px"><img src="img/퍼밀7.jpg" width="180px"><img src="img/퍼밀8.jpg" width="180px">
+			<img src="img/퍼밀9.jpg" width="180px">
+		    </div>
+		</div>
+		
+	</div>
+	
+</div>
+</nav>
+
+<div class="clear"></div>
+<footer id="footer">
+	<div id="bottom">
+		<div id="im1">
+			다모아 모든 리뷰를 한번에<br>
+			(주) 다모아ㅣ 대표자 컴맹탈출조<br>
+			이메일: alltogether@naver.com<br>
+			주소: 충청남도 호서대 동남구 호서대길12<br>
+			고객센터: 041-1234
+		</div>
+
+		<div id="im2">
+			디지털기술경영학과<br>
+			강세린 20210304<br>
+			김가은 20210308<br>
+			김규연 20210309<br>
+			김다혜 20210310
+		</div>
+	</div>
+</footer>
+</div>
+</body>
+</html>
+

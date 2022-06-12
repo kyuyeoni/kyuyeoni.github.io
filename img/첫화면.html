@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'>
+<style>
+* {padding: 0px; margin:0px;}
+#page{margin: 0 auto; width: 1150px;}
+.clear{clear: both;}
+
+/*배너 밑에 미니 메뉴바*/
+#menus{background-color: #ff7e00; height: 39px; width: 1140px;}
+#logo{border: solid 0px red; width: 110px; height: 30px; font-size: 30px; margin-left: 40px; float: left; margin-top: 4px; color: white; padding: 1px 0;} 
+#top_menu{border: solid 0px red; width: 300px; height: 30px; font-size: 20px; float: right; margin-top: 4px;  padding: 3px 0; color: white; }
+
+/*헤더*/
+#head{ width: 300px; height: 900px;  float: left; margin-left: 10px; margin-top: 20px;}
+#food{width: 150px;  font-size: 30px; margin: 0 auto; border: solid 0px red; text-align: center; padding: 5px; margin-top: 45px; }
+
+#search{width: 280px; border: solid 0px red;  padding: 5px; text-align: center; margin-left: 30px; margin-top: 3px;}
+#ttt{border: solid 2px #ff7e00; width: 190px; height: 25px;}
+#sss{border: solid 2px #ff7e00; background-color: #ff7e00; width: 60px; height: 27px; font-size: 10px; }
+
+#l1{width: 280px; border-bottom: solid 2px #ff7e00; padding: 5px 0; margin: 0 auto; margin-top: 10px; margin-left: 30px; font-size: 15px;}
+#l1 a{color: black; text-decoration: none; }
+#l1 a:visited{color: black; text-decoration: none; }
+#li a:hover{color: black; text-decoration: none;}
+
+#l2{width: 280px; border-top: solid 2px #ff7e00; padding: 5px 0; margin: 0 auto; margin-top: 10px; font-size: 15px; text-align: right;}
+#l2 a{color: black; text-decoration: none; }
+#l2 a:visited{color: black; text-decoration: none; }
+#l2 a:hover{color: black; text-decoration: none;}
+
+#fo{width: 370px; height: 820px; border-right: solid 1px #ff7e00 ;}
+
+
+
+
+
+.box1{width: 280px; height: 70px;  border: solid 1px #ff7e00; margin-left: 30px; margin-top: 10px;}
+
+/*섹샨*/
+#sec{width: 840px; height: 250px;  float: left;}
+
+#img{ width: 160px; height: 160px; background-color: palevioletred; float: left; margin-left: 160px; margin-top: 90px;}
+#n1{width: 450px; height: 140px; border: solid 0px red; float: left; margin-left: 70px; margin-top: 90px;}
+#c1{width: 350px;  font-size: 25px; border: solid 0px red; padding: 10px 0; text-align: left;}
+#c2{width: 350px;font-size: 15px; border: solid 0px red; padding: 5px 0; text-align: left;}
+#c3{width: 440px; height: 80px;  border: solid 0px red; margin-top: 10px ;}
+#c4{width: 440px;  border: solid 0px red; padding: 5px 0; text-align: left; font-size: 15px;}
+#c5{width: 440px;   border: solid 0px red; padding: 5px 0; text-align: left; font-size: 15px;}
+
+
+/*미니 네비게이션*/
+#mini_nav{width: 600px; height: 500px;  float: left; margin-left: 170px; margin-top: 25px;}
+
+input[type="radio"] {display: none;;}
+input[type="radio"] + label{display: inline-block; width: 80px; padding: 10px 20px 10px 20px;
+	 border-bottom: solid 2px #ff7e00; color: black; font-size: 17px; cursor: pointer; text-align: center;  }
+input[type="radio"]:checked + label{border-bottom: solid 2px #ff7e00;color: black;}
+
+.conbox{width: 600px; height:585px;background: whitesmoke; margin: 0 auto; display: none;}
+
+input[id="tab01"]:checked ~ .con1 {display: block;}
+input[id="tab02"]:checked ~ .con2 {display: block;}
+input[id="tab03"]:checked ~ .con3 {display: block;}
+input[id="tab04"]:checked ~ .con4 {display: block;}
+
+
+
+</style>
+</head>
+
+<body>
+<div id="page">
+
+<nav id="menus">
+		<div id="logo">다모아</div>
+		<div id="top_menu"> 회원가입 | 로그인 | 마이페이지 </div>
+</nav>
+
+<header id="head">
+	<div id="fo">
+	<div id="food">
+		식&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;당
+	</div>
+
+	<div id="search">
+		<form id="box">
+			<input type="text" id="ttt" value="">
+            <input type="submit" id="sss" value="검색">
+		</form>
+	</div>
+
+	<div id="line">
+		<div id="l1">
+			&nbsp;&nbsp;<a href="">추천순</a>&nbsp;&nbsp;
+			<a href="">거리가까운순</a>
+		</div>
+	</div>
+
+	<div class="box1">
+		내용
+	</div>
+	
+	<div class="box1">
+		내용
+	</div>
+
+	<div class="box1">
+		내용
+	</div>
+
+	<div class="box1">
+		내용
+	</div>
+
+	<div class="box1">
+		내용
+	</div>
+
+	<div class="box1">
+		내용
+	</div>
+
+	<div class="box1">
+		내용
+	</div>
+
+	<div class="box1">
+		내용
+	</div>
+
+	<div id="line">
+		<div id="l2">
+			<a href="">1</a>&nbsp;
+			<a href="">2</a>&nbsp;
+			<a href="">3</a>&nbsp;&nbsp;&nbsp;
+
+		</div>
+	</div>
+</div>
+
+
+</header>
+
+<section id="sec">
+	<div id="sec1">
+	  <div id="img"></div>
+	  <div id="n1">
+		<div id="c1">유박사</div>
+		<div id="c2">주소: 서울 마포구 동교로46길 26</div>
+		<div id="c3">
+			<div id="c4">#내용&nbsp;&nbsp; #내용&nbsp;&nbsp; #내용&nbsp;&nbsp; #내용 &nbsp;&nbsp;</div>
+			<div id="c5">#내용&nbsp;&nbsp; #내용&nbsp;&nbsp; #내용&nbsp;&nbsp; #내용&nbsp;&nbsp; </div>
+			
+
+		</div>
+
+	  </div>
+	</div>
+</section>
+
+
+<nav id="mini_nav">
+	<div class="tab_content">
+		<input type="radio" name="tabmenu" id="tab01" checked>
+		<label for="tab01"> 가게정보</label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<input type="radio" name="tabmenu" id="tab02">
+		<label for="tab02">메뉴판</label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<input type="radio" name="tabmenu" id="tab03">
+		<label for="tab03">리뷰</label>&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		<input type="radio"  name="tabmenu" id="tab04">
+		<label for="tab04">사진</label>&nbsp;&nbsp;&nbsp;&nbsp;
+
+		<div class="conbox con1">가게정보</div>
+		<div class="conbox con2"><img src="가은이img/메뉴판.png" width="400px"></div>
+		<div class="conbox con3">리뷰</div>
+		<div class="conbox con4">사진</div>
+	</div>
+
+	
+</nav>
+
+
+
+
+</div>
+</body>
+</html>
+
