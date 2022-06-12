@@ -12,7 +12,7 @@ html {
 body {
     margin: 0;
     height: 100%;
-    background: #f5f6f7;
+    background: white;
     font-family: 'Gowun Batang';
 }
 #logo {
@@ -38,7 +38,8 @@ body {
     width: 460px;
 }
 
-
+#Bjoin a:link{text-decoration: none; color: white;}
+#Bjoin a:visited{text-decoration: none; color: white;}
 /* 입력폼 */
 
 input:focus {outline: none;}
@@ -108,7 +109,7 @@ select {
     display: inline-block;
     text-align: start;
     border: none;
-    font-family: Dotum,'돋움',Helvetica,sans-serif;
+    font-family: Dotum,'Gowun Batang',Helvetica,sans-serif;
 }
 
 /* 버튼 */
@@ -117,7 +118,7 @@ select {
     margin: 30px 0 91px;
 }
 
-#btnJoin {
+#Bjoin {
     width: 100%;
     padding: 21px 0 17px;
     border: 0;
@@ -132,7 +133,7 @@ select {
     <body>
         <!-- header -->
         <div id="header">
-            <a href="https://nid.naver.com/user2/V2Join.nhn?m=agree#agreeBottom" target="_blank" title="네이버 회원가입 페이지 보러가기"><img src="img/다모아_로고.png" id="logo"></a>
+            <a href="다모아_메인화면.html"><img src="img/다모아_로고.png" id="logo"></a>
         </div>
 
 
@@ -254,8 +255,8 @@ select {
 
                 <!-- JOIN BTN-->
                 <div class="join">
-                    <button type="button" id="btnJoin">
-                        <span>가입하기</span>
+                    <button type="button" id="Bjoin">
+                        <span> <a href="다모아_메인화면.html">가입하기</a></span>
                     </button>
                 </div>
 
